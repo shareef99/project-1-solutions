@@ -59,6 +59,35 @@ function correctConvertTemperature(temperature, unit) {
 // console.log(correctConvertTemperature(25, "C"));
 // console.log(correctConvertTemperature(-40, "F"));
 
+// 3. Tip Calculator
+// Write a JavaScript function calculateTip that calculates the total amount to be paid, including the tip,
+// based on the bill amount and a specified tip percentage.
+// The function should take two arguments: billAmount (the total bill amount) and tipPercentage
+// (the tip percentage to be applied, expressed as a decimal). Calculate the tip amount by multiplying the billAmount
+// by the tipPercentage and add the calculated tip amount to the billAmount to get the total amount to be paid.
+// The function should return the total amount to be paid, rounded to two decimal places as a Number.
+// Example 1:
+// Input: 60.75, 0.25
+// Output: 75.94
+// Example 2:
+// Input: 90.00, 0.10
+// Output: 99
+// Note:
+// Use Number() method to convert string value to number.
+// The billAmount can be any positive numeric value representing the total bill amount.
+// The tipPercentage should be a decimal value between 0 and 1 (e.g., 0.15 for 15% tip).
+
+// Code with error(s):
+function calculateTip(billAmount, tipPercentage) {
+  // Write your code here
+  const tipAmount = billAmount * tipPercentage;
+  const totalAmount = billAmount + tipAmount;
+  return Number(totalAmount.toFixed(2));
+}
+
+console.log(calculateTip(60.75, 0.25));
+console.log(calculateTip(90.0, 0.1));
+
 // 5. Vowel Count
 // Write a JavaScript function countVowels that counts the number of vowels (a, e, i, o, u) in a given string.
 // The function should take one argument: str (string).
@@ -231,6 +260,6 @@ function reverseString3(str) {
   return result;
 }
 
-console.log(reverseString("JavaScript"));
-console.log(reverseString2("JavaScript"));
-console.log(reverseString3("JavaScript"));
+// console.log(reverseString("JavaScript"));
+// console.log(reverseString2("JavaScript"));
+// console.log(reverseString3("JavaScript"));
